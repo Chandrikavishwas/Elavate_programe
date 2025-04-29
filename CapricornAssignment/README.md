@@ -72,17 +72,17 @@ doctor-appointment-system/
 
 2. Navigate to the project directory
    
-   cd doctor-appointment-system
+  `cd doctor-appointment-system`
    
 
 3. Install dependencies
    
-   npm install
+   `npm install`
    
 
 4. Start the development server
    
-   npm start
+   `npm start`
    
 
 5. Open your browser and visit http://localhost:3000

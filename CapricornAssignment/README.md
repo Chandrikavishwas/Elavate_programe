@@ -30,7 +30,7 @@ A modern React application for booking appointments with healthcare professional
 
 ## 📁 Project Structure
 
-
+```
 doctor-appointment-system/
 ├── public/
 │   ├── index.html
@@ -61,7 +61,7 @@ doctor-appointment-system/
 │   ├── App.jsx
 │   └── index.js
 └── README.md
-
+```
 
 ## Installation and Setup
 

@@ -67,7 +67,7 @@ doctor-appointment-system/
 
 1. Clone the repository
    
-   git clone https://github.com/Chandrikavishwas/doctor-appointment-system.git
+   `git clone https://github.com/Chandrikavishwas/doctor-appointment-system.git`
    
 
 2. Navigate to the project directory

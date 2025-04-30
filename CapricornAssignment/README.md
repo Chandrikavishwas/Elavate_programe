@@ -2,7 +2,7 @@
 
 A modern React application for booking appointments with healthcare professionals. This application features a user-friendly interface with dark and light theme options, interactive particle background, and comprehensive doctor management functionality.
 # Netlify Deployed link-
-[Live Demo](https://magnificent-nasturtium-056aaa.netlify.app/)
+[Live Demo](https://capricornassesment.netlify.app/)
 
 ## Features
 

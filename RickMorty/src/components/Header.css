@@ -1,0 +1,44 @@
+.header {
+  background-color:purple;
+  color: white;
+  padding:0px;
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index:50;
+  height:auto;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--spacing-md) 0;
+}
+
+.title {
+  margin: 0;
+  font-size:1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+  }
+}

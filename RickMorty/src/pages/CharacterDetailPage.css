@@ -1,0 +1,155 @@
+.character-detail-page {
+  padding: var(--spacing-md) 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.character-profile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  background-color: var(--color-card);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.character-image-container {
+  position: relative;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.character-image {
+  width: 100%;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.character-status {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: white;
+}
+
+.character-name {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text);
+}
+
+.info-section {
+  margin-bottom: var(--spacing-md);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-sm);
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-label {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+
+.info-value {
+  font-size: 1.1rem;
+  color: var(--color-text);
+}
+
+.section-title {
+  margin-bottom: var(--spacing-md);
+  font-size: 1.5rem;
+  color: var(--color-text);
+}
+
+.episodes-section {
+  background-color: var(--color-card);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-md);
+}
+
+.episodes-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-sm);
+}
+
+.episode-item {
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-md);
+  background-color: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.episode-code {
+  font-size: 0.9rem;
+  color: var(--color-secondary);
+  font-weight: 500;
+}
+
+.episode-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.episode-date {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+.loading, .error {
+  text-align: center;
+  padding: var(--spacing-xl) 0;
+  font-size: 1.2rem;
+}
+
+.error {
+  color: var(--color-dead);
+}
+
+@media (min-width: 768px) {
+  .character-profile {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .character-image-container {
+    flex: 0 0 300px;
+    margin: 0;
+  }
+  
+  .character-info {
+    flex: 1;
+    padding-left: var(--spacing-lg);
+  }
+  
+  .info-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .episodes-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .episodes-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

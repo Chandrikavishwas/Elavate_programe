@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #fff5f9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-md transition-colors duration-200 font-medium;
+  }
+  
+  .btn-secondary {
+    @apply bg-white border border-primary-300 hover:border-primary-500 text-primary-500 px-4 py-2 rounded-md transition-colors duration-200 font-medium;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-card p-6 transition-all duration-300 hover:shadow-hover;
+  }
+  
+  .input-field {
+    @apply w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-300;
+  }
+}
+
+.calendar-day {
+  @apply h-24 border border-gray-200 bg-white transition-colors hover:bg-primary-50 cursor-pointer p-1 overflow-hidden;
+}
+
+.calendar-day-header {
+  @apply h-10 bg-primary-100 border border-gray-200 flex items-center justify-center font-medium text-primary-800;
+}
+
+.calendar-day-disabled {
+  @apply bg-gray-50 cursor-default text-gray-400;
+}
+
+.appointment-dot {
+  @apply w-2 h-2 rounded-full bg-primary-500 mr-1 inline-block;
+}
+
+.appointment-item {
+  @apply text-xs truncate text-gray-700 bg-primary-100 rounded px-1 py-0.5 mb-1 block;
+}

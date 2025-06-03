@@ -93,4 +93,4 @@ const ParticlesComponent = ({ id }) => {
   return <Particles id={id} init={particlesLoaded} options={options} />
 }
  
-export default ParticlesComponent
+export default ParticlesComponent;

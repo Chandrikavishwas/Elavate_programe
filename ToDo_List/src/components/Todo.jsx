@@ -1,44 +1,44 @@
-import { useState } from "react"
+import { useState } from "react";
 
 function Todo() {
-  const [todos, setTodos] = useState([])
-  const [input, setInput] = useState("")
-  const [editId, setEditId] = useState(null)
-  const [editText, setEditText] = useState("")
+  const [todos, setTodos] = useState([]);
+  const [input, setInput] = useState("");
+  const [editId, setEditId] = useState(null);
+  const [editText, setEditText] = useState("");
 
   const addTodo = () => {
     if (input.trim()) {
-      setTodos([...todos, { id: Date.now(), text: input }])
-      setInput("")
+      setTodos([...todos, { id: Date.now(), text: input }]);
+      setInput("");
     }
-  }
-
+  };
   const editTodo = (id) => {
-    const todo = todos.find((t) => t.id === id)
-    setEditId(id)
-    setEditText(todo.text)
-  }
-
+    const todo = todos.find((t) => t.id === id);
+    setEditId(id);
+    setEditText(todo.text);
+  };
   const saveEdit = () => {
-    setTodos(todos.map((todo) => (todo.id === editId ? { ...todo, text: editText } : todo)))
-    setEditId(null)
-    setEditText("")
-  }
-
+    setTodos(
+      todos.map((todo) =>
+        todo.id === editId ? { ...todo, text: editText } : todo
+      )
+    );
+    setEditId(null);
+    setEditText("");
+  };
   const cancelEdit = () => {
-    setEditId(null)
-    setEditText("")
-  }
-
+    setEditId(null);
+    setEditText("");
+  };
   const deleteTodo = (id) => {
-    setTodos(todos.filter((todo) => todo.id !== id))
-  }
-
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
   return (
     <div className="max-w-md w-full mx-auto mt-8 p-6 bg-gray-800/20 backdrop-blur-md border border-purple-700/50 rounded-lg shadow-lg">
-      <h1 className="text-2xl sm:text-3xl font-bold text-white mb-6 text-center">Todo List</h1>
+      <h1 className="text-2xl sm:text-3xl font-bold text-white mb-6 text-center">
+        Todo List
+      </h1>
 
-      {/* Responsive flex-wrap: on small screens input and button stack */}
       <div className="flex flex-wrap gap-2 mb-4">
         <input
           type="text"
@@ -85,7 +85,9 @@ function Todo() {
               </>
             ) : (
               <>
-                <span className="flex-grow text-white min-w-[150px]">{todo.text}</span>
+                <span className="flex-grow text-white min-w-[150px]">
+                  {todo.text}
+                </span>
                 <button
                   onClick={() => editTodo(todo.id)}
                   className="px-3 py-1 bg-teal-600 text-white rounded hover:bg-teal-500 transition-colors text-sm"
@@ -104,9 +106,11 @@ function Todo() {
         ))}
       </ul>
 
-      {todos.length === 0 && <p className="text-center text-gray-400 mt-4">No tasks yet.</p>}
+      {todos.length === 0 && (
+        <p className="text-center text-gray-400 mt-4">No tasks yet.</p>
+      )}
     </div>
-  )
+  );
 }
 
-export default Todo
+export default Todo;

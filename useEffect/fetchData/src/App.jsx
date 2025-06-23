@@ -20,7 +20,7 @@ function App() {
           return <div key={res.id}>{res.id}  {res.title}</div>
         })
       }
-      <button onClick={() =>{setData(data+1)}}>Click</button>
+      
     </>
   )
 }
